@@ -15,7 +15,7 @@ class RenameTables extends Migration
     {
         Schema::rename('actor', 'actors');
         Schema::rename('address', 'addresses');
-        Schema::rename('category', 'categores');
+        Schema::rename('category', 'categories');
         Schema::rename('city', 'cities');
         Schema::rename('country', 'countries');
         Schema::rename('customer', 'customers');
