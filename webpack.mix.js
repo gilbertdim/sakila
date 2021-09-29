@@ -16,3 +16,13 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
     require('tailwindcss'),
     require('autoprefixer'),
 ]);
+
+mix.styles([
+    'node_modules/bootstrap/dist/css/bootstrap.min.css',
+], 'public/css/all.css')
+
+mix.scripts([
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/@popperjs/core/dist/cjs/popper.js'
+], 'public/js/all.js')
