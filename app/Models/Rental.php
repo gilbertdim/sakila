@@ -16,4 +16,14 @@ class Rental extends Model
             $rental->rental_date = now();
         });
     }
+
+    public function payment()
+    {
+        return $this->hasOne(Payment::class, 'rental_id', 'rental_id');
+    }
+
+    public function staff()
+    {
+        return $this->hasOne(Staff::class, 'staff_id', 'staff_id');
+    }
 }

@@ -16,4 +16,19 @@ class Customer extends Model
             $customer->create_date = now();
         });
     }
+
+    public function address()
+    {
+        return $this->hasOne(Address::class, 'address_id', 'address_id');
+    }
+
+    public function store()
+    {
+        return $this->belongsTo(Store::class, 'customer_id', 'customer_id');
+    }
+
+    public function rentals()
+    {
+        return $this->hasMany(Rental::class, 'customer_id', 'customer_id');
+    }
 }

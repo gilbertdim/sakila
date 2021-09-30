@@ -9,4 +9,5 @@ class Staff extends Model
 {
     use HasFactory;
     protected $primaryKey = 'staff_id';
+    public $timestamps = false;
 }

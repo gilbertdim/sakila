@@ -9,4 +9,6 @@ class Country extends Model
 {
     use HasFactory;
     protected $primaryKey = 'country_id';
+    public $timestamps = false;
+
 }

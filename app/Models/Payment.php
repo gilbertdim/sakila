@@ -9,6 +9,7 @@ class Payment extends Model
 {
     use HasFactory;
     protected $primaryKey = 'payment_id';
+    public $timestamps = false;
     
     protected static function booted()
     {
