@@ -10,7 +10,13 @@ class Actor extends Model
     use HasFactory;
     protected $primaryKey = 'actor_id';
     public $timestamps = false;
+    public $appends = [ 'fullname' ];
     
+    public function getFullnameAttribute()
+    {
+        return "$this->first_name $this->last_name";
+    }
+
     public function films()
     {
         return $this->hasManyThrough(
